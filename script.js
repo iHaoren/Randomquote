@@ -107,8 +107,6 @@ newQuoteButton.addEventListener('click', function() {
 function playAudio() {
   const audio = document.getElementById('soundtrack')
   if (audio) {
-    // Reset audio
-    audio.currentTime = 0
     //play audio
     audio.play().catch(function(error) {
       console.log('audio error:', error)
