@@ -60,7 +60,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover , button:active{
+button:hover {
     background-color: #004d40;
     color: #888;
 }
@@ -77,10 +77,15 @@ button:hover , button:active{
     }
 
     .quote-box #quote {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .quote-box #author {
-        font-size: 0.6em;
+        font-size: 0.8em;
+    }
+
+    button:active {
+    background-color: #004d40;
+    color: #888;
     }
 }

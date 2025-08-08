@@ -17,7 +17,7 @@ const quotes = [
     author: "Ali bin Abi Thalib"
   },
   {
-    text: "Al-‘ilm lā yanfad, wa innamā yanfad ash-shakhs idzā taraka at-ta‘allum. (Ilmu tidak akan pernah habis, yang habis hanyalah seseorang yang berhenti belajar.)",
+    text: "Al-'ilm lā yanfad, wa innamā yanfad ash-shakhs idzā taraka at-ta'allum. (Ilmu tidak akan pernah habis, yang habis hanyalah seseorang yang berhenti belajar.)",
     author: "Al-Khawarizmi"
   },
   {
@@ -41,7 +41,7 @@ const quotes = [
     author: "Oprah Winfrey"
   },
   {
-    text: "Don’t count the days, make the days count.",
+    text: "Don't count the days, make the days count.",
     author: "Muhammad Ali"
   },
   {
@@ -49,36 +49,36 @@ const quotes = [
     author: "Peribahasa Arab"
   },
   {
-    text: "Al-‘ilmu nūr(un), wal-jahlu ẓulmah. (Ilmu adalah cahaya, dan kebodohan adalah kegelapan.)",
+    text: "Al-'ilmu nūr(un), wal-jahlu ẓulmah. (Ilmu adalah cahaya, dan kebodohan adalah kegelapan.)",
     author: "Peribahasa Arab"
   },
   {
-    text: "Shippai wa seikō no haha de aru. (Kegagalan adalah ibu dari keberhasilan.)",
-    author: "Peribahasa Jepang"
+    text: "Kesuksesan tidak datang dari apa yang diberikan oleh orang lain, tapi dari keyakinan dan kerja keras.",
+    author: "Chairul Tanjung"
   },
   {
-    text: "Ore wa Pirate King ni naru! (Aku akan menjadi Raja Bajak Laut!)",
-    author: "Monkey D. Luffy – One Piece"
+    text: "Pendidikan adalah senjata paling mematikan di dunia, karena dengan itu Anda dapat mengubah dunia.",
+    author: "Nelson Mandela"
   },
   {
-    text: "Yamete kudasai! Watashi wa hito wo koroshitakunai... (Berhenti! Aku tidak ingin membunuh siapa pun...)",
-    author: "Ken Kaneki – Tokyo Ghoul"
+    text: "Hidup ini adalah petualangan yang berani atau bukan apa-apa sama sekali.",
+    author: "Helen Keller"
   },
   {
-    text: "Power comes in response to a need, not a desire. You have to create that need.",
-    author: "Goku – Dragon Ball Z"
+    text: "Masa muda adalah masa yang berapi-api.",
+    author: "Sutan Sjahrir"
   },
   {
-    text: "Hard work is worthless for those that don’t believe in themselves.",
-    author: "Naruto Uzumaki – Naruto"
+    text: "Your time is limited, don't waste it living someone else's life.",
+    author: "Steve Jobs"
   },
   {
-    text: "A lesson without pain is meaningless. That’s because you can’t gain something without sacrificing something else.",
-    author: "Edward Elric – Fullmetal Alchemist"
+    text: "Excellence is not being the best; it is doing your best.",
+    author: "Paulo Coelho"
   },
   {
-    text: "Fear is not evil. It tells you what your weakness is. And once you know your weakness, you can become stronger as well as kinder.",
-    author: "Gildarts Clive – Fairy Tail"
+    text: "Everything you can imagine is real.",
+    author: "Pablo Picasso"
   }
 ];
 
@@ -99,16 +99,21 @@ function generateQuote() {
 }
 
 // Add event listener for the button
-newQuoteButton.addEventListener('click', generateQuote)
-
-// Call generate quote when page first loaded
-generateQuote()
-
+newQuoteButton.addEventListener('click', function() {
+  generateQuote()
+  playAudio()
+})
 // Sountrack audio
-window.addEventListener('DOMContentLoaded', function() {
-  const audio = this.document.getElementById('soundtrack')
+function playAudio() {
+  const audio = document.getElementById('soundtrack')
   if (audio) {
-    audio.play().catch(() => {
+    // Reset audio
+    audio.currentTime = 0
+    //play audio
+    audio.play().catch(function(error) {
+      console.log('audio error:', error)
     })
   }
-})
+}
+// Call generate quote when page first loaded
+generateQuote()
