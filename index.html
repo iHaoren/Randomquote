@@ -4,21 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Quote Generator</title>
+    <!-- SEO -->
+    <meta property="og:title" content="Random Quote Generator" />
+    <meta
+      property="og:description"
+      content="Quotes keren yang relate dengan keadaan saat ini."
+    />
+    <meta
+      property="og:image"
+      content="https://ihaoren.github.io/Randomquote/img/preview.webp"
+    />
+    <meta property="url" content="https://ihaoren.github.io/Randomquote" />
     <!-- linking the CSS File -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="quote-container">
-        <h1>Random Quote Generator</h1>
-        <div class="quote-box">
-            <p id="quote">Click the button below to generate a random quote</p>
-            <p id="author">- Author</p>
-        </div>
-        <button id="new-quote">New Quote</button>
+      <h1>Random Quote Generator</h1>
+      <div class="quote-box">
+        <p id="quote">Click the button below to generate a random quote</p>
+        <p id="author">- Author</p>
+      </div>
+      <button id="new-quote">New Quote</button>
     </div>
 
     <!-- Soundtrack -->
-     <audio id="soundtrack" src="Doremon Sad Soundtrack.mp3" preload="auto"></audio>
+    <audio
+      id="soundtrack"
+      src="Doremon Sad Soundtrack.mp3"
+      preload="auto"
+    ></audio>
 
     <!-- linking for Javascript file -->
     <script src="script.js"></script>
