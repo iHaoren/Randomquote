@@ -50,8 +50,7 @@ body {
 }
 
 button {
-    background-color: #00796b;
-    color: #ffffff;
+    background-color: #2cebd4;
     padding: 12px 24px;
     border: none;
     border-radius: 10px;
@@ -60,9 +59,9 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button:active {
     background-color: #004d40;
-    color: #888;
+    color: #ffffff;
 }
 
 /* View screen for mobile */
@@ -82,10 +81,5 @@ button:hover {
 
     .quote-box #author {
         font-size: 0.8em;
-    }
-
-    button:active {
-    background-color: #004d40;
-    color: #888;
     }
 }
